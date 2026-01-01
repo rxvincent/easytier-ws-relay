@@ -1,4 +1,4 @@
-name = "easytier-ws-relay-worker"
+name = "private-easytier-ws-server"
 main = "src/worker.js"
 compatibility_date = "2024-11-01"
 compatibility_flags = ["nodejs_compat"]
@@ -8,11 +8,12 @@ WS_PATH = "ws"
 EASYTIER_DISABLE_RELAY = "1"
 EASYTIER_COMPRESS_RPC = "1"
 
+[[migrations]]
+tag = "<v1>" # Migration identifier. This should be unique for each migration entry
+new_sqlite_classes = ["RelayRoom"] # Array of new classes
+# For SQLite storage backend use new_sqlite_classes=["<NewDurableObjectClass>"] instead
+
 [durable_objects]
 bindings = [
   { name = "RELAY_ROOM", class_name = "RelayRoom" }
 ]
-
-[[migrations]]
-tag = "v1"
-new_sqlite_classes = ["RelayRoom"]
