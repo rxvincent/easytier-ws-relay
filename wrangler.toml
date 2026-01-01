@@ -9,7 +9,7 @@ EASYTIER_DISABLE_RELAY = "1"
 EASYTIER_COMPRESS_RPC = "1"
 
 [[migrations]]
-tag = "<v1>" # Migration identifier. This should be unique for each migration entry
+tag = "v1" # Migration identifier. This should be unique for each migration entry
 new_sqlite_classes = ["RelayRoom"] # Array of new classes
 # For SQLite storage backend use new_sqlite_classes=["<NewDurableObjectClass>"] instead
 
