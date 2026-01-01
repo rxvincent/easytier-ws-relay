@@ -10,8 +10,9 @@ EASYTIER_COMPRESS_RPC = "1"
 
 [durable_objects]
 bindings = [
-
+  { name = "RELAY_ROOM", class_name = "RelayRoom" }
 ]
 
 [[migrations]]
 tag = "v1"
+new_sqlite_classes = ["RelayRoom"]
