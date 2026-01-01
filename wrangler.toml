@@ -5,14 +5,13 @@ compatibility_flags = ["nodejs_compat"]
 
 [vars]
 WS_PATH = "ws"
-EASYTIER_DISABLE_RELAY = "0"
+EASYTIER_DISABLE_RELAY = "1"
 EASYTIER_COMPRESS_RPC = "1"
 
 [durable_objects]
 bindings = [
-  { name = "RELAY_ROOM", class_name = "RelayRoom" }
+
 ]
 
 [[migrations]]
 tag = "v1"
-new_sqlite_classes = ["RelayRoom"]
